@@ -147,9 +147,9 @@ namespace swapbot
             decimal ustaw = rbProc.Checked ? currCutoff * ((100 - nudPerc.Value) / 100) : currCutoff - nudPerc.Value; //teraz to jest "ile ma być"
 
 
-            // jezeli czas pomiedzy 20:00 a 20:20 wtedy ustaw rate na 299
-            TimeSpan startTime = TimeSpan.Parse("20:30"); // przedzial od 20:00 
-            TimeSpan endTime = TimeSpan.Parse("20:50");   // do godziny 20:20
+            // jezeli czas pomiedzy 20:30 a 20:50 wtedy ustaw rate na 299
+            TimeSpan startTime = TimeSpan.Parse("20:30"); // przedzial od 20:30 
+            TimeSpan endTime = TimeSpan.Parse("20:50");   // do godziny 20:50
             TimeSpan nowTime = DateTime.Now.TimeOfDay;
 
             if (nowTime >= startTime && nowTime <= endTime)
